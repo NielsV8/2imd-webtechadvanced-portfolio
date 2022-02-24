@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+header p{
+    letter-spacing: 2px;
+}
+
