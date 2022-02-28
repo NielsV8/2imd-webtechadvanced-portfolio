@@ -2,12 +2,19 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body{
     margin: 0;
     font-family: 'Montserrat';
+    background-repeat: no-repeat;
+    background-image: url("https://images.pexels.com/photos/1540338/pexels-photo-1540338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
-header{
+.header{
     background-color: black;
     color: white;
     padding: 6px;
@@ -20,3 +27,31 @@ header p{
     letter-spacing: 2px;
 }
 
+.qr img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-height: 350px;
+    max-width: 350px;
+
+}
+
+.data{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.price{
+    grid-column: 1/3;
+}
+
+.data p{
+    border: 1px solid black;
+    margin: 0px;
+    padding: 20px;
+}
