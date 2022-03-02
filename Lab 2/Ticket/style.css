@@ -11,7 +11,8 @@ body{
     margin: 0;
     font-family: 'Montserrat';
     background-repeat: no-repeat;
-    background-image: url("https://images.pexels.com/photos/1540338/pexels-photo-1540338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("https://images.pexels.com/photos/1692695/pexels-photo-1692695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.7);
 }
 
 .header{
@@ -66,27 +67,27 @@ header p{
     }
     
     main{
-        margin: 180px;
         display: grid;
+        margin: 180px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 200px 60px 60px;
     }
     
     .header{
+        border: solid black 1px;
         background-color: unset;
         color: unset;
-        border: solid black 1px;
-        grid-column: 1/4;
         flex-direction: column;
+        grid-column: 1/4;
+    
     }
 
     .data {
+        display: flex;
         margin: unset;
         position: inherit;
         grid-column: 1/4;
         grid-row: 2/2;
-        display: flex;
-        justify-content: space-evenly;
         align-items: stretch;
     }
 
@@ -108,10 +109,9 @@ header p{
         display: flex;
         grid-column: 1/4;
         grid-row: 3/4;
-        text-align: center;
         border: solid black 1px;
+        text-align: center;
         height: 100%;
-        align-self: flex-start;
         margin: 0;
         justify-content: center;
         align-items: center;
