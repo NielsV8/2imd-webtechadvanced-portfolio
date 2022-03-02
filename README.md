@@ -5,3 +5,4 @@
 
 # Lab 2
 * [Lab 2 - The Future](https://github.com/NielsV8/2imd-webtechadvanced-portfolio/tree/main/Lab%202/TheFuture)
+* [Lab 2 - Ticket](https://github.com/NielsV8/2imd-webtechadvanced-portfolio/tree/main/Lab%202/Ticket)
