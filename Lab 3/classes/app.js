@@ -25,8 +25,8 @@ export default class App {
       if(e.key === 'Enter'){
         console.log("📕");
         let todo = new Todo("This is Rocket League");
-        Todo.add();
-        Todo.saveToStorage();
+        todo.add();
+        todo.saveToStorage();
       }
       // HINT🤩
       // this function should create a new todo by using the Todo() class
