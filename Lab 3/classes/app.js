@@ -27,7 +27,13 @@ export default class App {
         let todo = new Todo(document.querySelector("#add-item-text").value);
         todo.add();
         todo.saveToStorage();
+        this.reset(); 
       }
+
+      if(document.getElementById("add-item-text").value === "medium:" + this.title){
+        li.classList.add("prior-medium");
+      }
+
       // HINT🤩
       // this function should create a new todo by using the Todo() class
       // new Todo(text)
@@ -45,6 +51,7 @@ export default class App {
     }
   
     reset() {
+      document.getElementById("add-item-text").value = '';
       // this function should reset the form / clear the text field
     }
   }
