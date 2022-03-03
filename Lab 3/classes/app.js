@@ -1,4 +1,4 @@
-import Todo from "./todo";
+import Todo from "./todo.js";
 
 export default class App {
     constructor() {
@@ -24,7 +24,7 @@ export default class App {
     createItem(e) {
       if(e.key === 'Enter'){
         console.log("📕");
-        let todo = new Todo("This is Rocket League");
+        let todo = new Todo(document.querySelector("#add-item-text").value);
         todo.add();
         todo.saveToStorage();
       }
