@@ -4,6 +4,7 @@ export default class App {
     constructor() {
       console.log("🍕");
       this.setupEventListeners();
+      todo.loadFromStorage();
       // HINT🤩
       // set up the enter Key
       // this.setupEventListeners();
@@ -29,10 +30,7 @@ export default class App {
         todo.saveToStorage();
         this.reset(); 
       }
-
-      if(document.getElementById("add-item-text").value === "medium:" + this.title){
-        li.classList.add("prior-medium");
-      }
+      
 
       // HINT🤩
       // this function should create a new todo by using the Todo() class

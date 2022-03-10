@@ -18,8 +18,6 @@ export default class Todo {
       else if(li.innerHTML.includes("Low: ")){
         li.classList.add("prior-low");
       }
-    
-      
 
       return li;
       // HINT🤩
@@ -32,6 +30,10 @@ export default class Todo {
   
     markDone(e) {
       // HINT🤩
+      const onClick = function() {
+        console.log(this.id, this.innerHTML);
+      }
+      document.getElementById('todo-list').onclick = onClick;
       // this function should mark the current todo as done, by adding the correct CSS class
       // if the item is clicked, but was already marked as done, remove the item from the list
     }
