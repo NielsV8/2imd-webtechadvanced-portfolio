@@ -1,22 +1,25 @@
 export default class Todo {
-    constructor(title, priority) {
+    constructor(title, done = false) {
       // HINT🤩
       // use a constructor to set basic property values
       this.title = title;
-      this.priority = priority;
+      this.done = done;
     }
   
     createElement() {
       let li = document.createElement("li");
       li.innerHTML = this.title;
-      if(li.innerHTML.includes("High: ")){
+      if(li.innerHTML.startsWith("High: ")){
         li.classList.add("prior-high");
+        li.innerHTML = this.title.slice(5);
       }
       else if(li.innerHTML.includes("Medium: ")){
         li.classList.add("prior-medium");
+        li.innerHTML = this.title.slice(7);
       }
       else if(li.innerHTML.includes("Low: ")){
         li.classList.add("prior-low");
+        li.innerHTML = this.title.slice(4);
       }
 
       return li;
@@ -33,7 +36,6 @@ export default class Todo {
       const onClick = function() {
         console.log(this.id, this.innerHTML);
       }
-      document.getElementById('todo-list').onclick = onClick;
       // this function should mark the current todo as done, by adding the correct CSS class
       // if the item is clicked, but was already marked as done, remove the item from the list
     }

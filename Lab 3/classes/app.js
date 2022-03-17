@@ -4,7 +4,6 @@ export default class App {
     constructor() {
       console.log("🍕");
       this.setupEventListeners();
-      todo.loadFromStorage();
       // HINT🤩
       // set up the enter Key
       // this.setupEventListeners();
@@ -23,23 +22,13 @@ export default class App {
     }
   
     createItem(e) {
-      if(e.key === 'Enter'){
+      if(e.key === 'Enter' && document.querySelector("#add-item-text").value != ""){
         console.log("📕");
         let todo = new Todo(document.querySelector("#add-item-text").value);
         todo.add();
-        todo.saveToStorage();
         this.reset(); 
+        todo.saveToStorage();      
       }
-      
-
-      // HINT🤩
-      // this function should create a new todo by using the Todo() class
-      // new Todo(text)
-      // todo.add();
-      // todo.saveToStorage();
-      // if you used bind() in the previous function, you'll notice that this refers to the current class instance
-      // clear the text field with .reset() after adding the item
-      // if (e.key === "Enter")
     }
   
     loadFromStorage() {
@@ -50,7 +39,6 @@ export default class App {
   
     reset() {
       document.getElementById("add-item-text").value = '';
-      // this function should reset the form / clear the text field
     }
   }
   
