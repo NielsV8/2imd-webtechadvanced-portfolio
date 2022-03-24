@@ -22,6 +22,12 @@ export default class Todo {
         li.innerHTML = this.title.slice(4);
       }
 
+      li.lijst = this;
+        li.addEventListener("click", this.markDone.bind(li));
+        if(this.done == true) {
+            li.classList.add("done");
+        }
+
       return li;
       // HINT🤩
       // this method will create the HTML structure with the correct classes, based on the todo priority
@@ -33,9 +39,14 @@ export default class Todo {
   
     markDone(e) {
       // HINT🤩
-      const onClick = function() {
-        console.log(this.id, this.innerHTML);
-      }
+      if(this.classList.contains("done")){
+        this.remove();
+        localStorage.removeItem(this.lijst.title);
+    } else {
+        this.classList.add("done");
+        this.lijst.done = true;
+        this.lijst.saveToStorage();
+    }
       // this function should mark the current todo as done, by adding the correct CSS class
       // if the item is clicked, but was already marked as done, remove the item from the list
     }
@@ -49,6 +60,7 @@ export default class Todo {
   
     saveToStorage() {
       // HINT🤩
+      localStorage.setItem(this.title, JSON.stringify(this));
       // localStorage only supports strings, not arrays
       // if you want to store arrays, look at JSON.parse and JSON.stringify
     }
